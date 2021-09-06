@@ -1,16 +1,45 @@
-# my_project_name
+<h1 align='center'> 🌌 Galaxy images App using Flutter and JSON  &nbsp   </h1> <br>
 
-A new Flutter project.
+This project is a Galaxy images viewing app that fetches images from JSON.
 
-## Getting Started
+## 🖼️ Final UI <br>
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+<img src="https://i.ibb.co/0mm6Vs6/Screenshot-20210821-131612-iphonffffe12black-portrait.jpg">
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 💠 Dependencies <br>
+### ✔️Packages used:<br>
+🔹 cupertino_icons: ^1.0.2
+🔹 http: any
+🔹 flutter_staggered_grid_view: ^0.3.0
+🔹 cached_network_image: ^2.5.0
+🔹 flutter_launcher_name: "^0.0.1"
+🔹 flutter_launcher_icons: ^0.7.4
+
+ 
+### ✔️Font used:<br>
+🔹 ProductSans from Google
+
+
+
+-----------------------------------------------------------------
+
+[![Works with Android](https://img.shields.io/badge/Works_with-Android-green?style=flat-square)]
+[![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)]
+[![Awesome Badges](https://img.shields.io/badge/badges-awesome-green.svg)]
+[![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github)] <br>
+[![ForTheBadge built-by-developers](http://ForTheBadge.com/images/badges/built-by-developers.svg)]
+<br>
+<br>
+
+**⭐ The repo**
+
+
+
+### Eat, Sleep, CODE, Repeat!
+
+
+
+
+
