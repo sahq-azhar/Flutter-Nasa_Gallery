@@ -1,6 +1,6 @@
 <h1 align='center'> 🌌 Galaxy images App using Flutter and JSON  &nbsp   </h1> <br>
 
-This project is a Galaxy images viewing app that fetches images from JSON.
+This project is a Galaxy images viewing app that fetches images and other details from JSON.
 
 ## 🖼️ Final UI <br>
 
