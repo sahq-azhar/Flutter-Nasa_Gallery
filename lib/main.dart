@@ -29,7 +29,7 @@ class Test extends StatelessWidget {
   Future<List> fetchAds() async {
     //the link you want to data from, goes inside get
     var url = Uri.parse(
-        "https://raw.githubusercontent.com/sahq-azhar/test/main/data.json");
+        "https://raw.githubusercontent.com/sahq-azhar/Flutter-Nasa_Gallery/main/data.json");
     final response = await http.get(url);
     if (response.statusCode == 200) return json.decode(response.body);
     return [];
