@@ -1,9 +1,11 @@
+import 'dart:convert';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Detailpage extends StatefulWidget {
-  Detailpage(this.ad);
-  final ad;
+  Detailpage(this.pf);
+  final pf;
   _DetailpageState createState() => _DetailpageState();
 }
 
@@ -17,7 +19,7 @@ class _DetailpageState extends State<Detailpage> {
 
   void initState() {
     setState(() {
-      pf = widget.ad;
+      pf = widget.pf;
 
       image = (pf['url'] != '') ? pf['url'] : '';
       title = (pf['title'] != '') ? pf['title'] : '';

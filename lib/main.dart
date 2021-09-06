@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
 }
 
 class Test extends StatelessWidget {
-  Future<List> fetchAds() async {
+  Future<List> fetchdata() async {
     //the link you want to data from, goes inside get
     var url = Uri.parse(
         "https://raw.githubusercontent.com/sahq-azhar/Flutter-Nasa_Gallery/main/data.json");
@@ -43,7 +43,7 @@ class Test extends StatelessWidget {
         Padding(
           padding: EdgeInsets.only(top: 145),
           child: FutureBuilder<List>(
-              future: fetchAds(),
+              future: fetchdata(),
               builder: (BuildContext context, AsyncSnapshot snapshot) {
                 if (snapshot.connectionState == ConnectionState.waiting) {
                   return Center(child: CircularProgressIndicator());
@@ -94,8 +94,8 @@ class Test extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage(this.ad);
-  final ad;
+  MyHomePage(this.pf);
+  final pf;
   _MyHomePageState createState() => _MyHomePageState();
 }
 
@@ -109,7 +109,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void initState() {
     setState(() {
-      pf = widget.ad;
+      pf = widget.pf;
       //if values are not null only we need to show them
       image = (pf['url'] != '') ? pf['url'] : '';
       title = (pf['title'] != '') ? pf['title'] : '';
