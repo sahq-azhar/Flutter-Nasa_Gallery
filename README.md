@@ -4,8 +4,7 @@ This project is a Galaxy images viewing app that fetches images from JSON.
 
 ## 🖼️ Final UI <br>
 
-
-<img src="https://i.ibb.co/0mm6Vs6/Screenshot-20210821-131612-iphonffffe12black-portrait.jpg">
+<img src="https://i.ibb.co/Jy3kG0B/1.jpg" alt="1" border="0">
 
 
 ## 💠 Dependencies <br>
