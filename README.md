@@ -4,7 +4,7 @@ This project is a Galaxy images viewing app that fetches images and other detail
 
 ## 🖼️ Final UI <br>
 
-<img src="https://i.ibb.co/Jy3kG0B/1.jpg" alt="1" border="0">
+<img src="https://raw.githubusercontent.com/sahq-azhar/Flutter-Nasa_Gallery/main/1.jpg" alt="1" border="0">
 
 
 ## 💠 Dependencies <br>
