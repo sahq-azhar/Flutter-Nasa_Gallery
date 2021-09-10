@@ -4,13 +4,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Detailpage extends StatefulWidget {
-  Detailpage(this.pf);
+  Detailpage(this.pf, this.sd);
   final pf;
+  final sd;
   _DetailpageState createState() => _DetailpageState();
 }
 
 class _DetailpageState extends State<Detailpage> {
   var pf;
+  var sd;
   String image;
   String title;
   String own;
@@ -20,7 +22,7 @@ class _DetailpageState extends State<Detailpage> {
   void initState() {
     setState(() {
       pf = widget.pf;
-
+      sd = widget.sd;
       image = (pf['url'] != '') ? pf['url'] : '';
       title = (pf['title'] != '') ? pf['title'] : '';
       own = (pf['copyright'] != '') ? pf['copyright'] : '';
@@ -38,15 +40,31 @@ class _DetailpageState extends State<Detailpage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: GestureDetector(
-        onPanUpdate: (dis) {
-          if (dis.delta.dx > 0) {
-            print("right");
-          } else if (dis.delta.dx < 0) {
-            print("left");
-          }
-        },
-        child: SingleChildScrollView(
+      body: SingleChildScrollView(
+        child: GestureDetector(
+          onPanUpdate: (dis) {
+            if (dis.delta.dx < 0) {
+              print("right");
+              setState(() {
+                title = sd[sd.indexOf(pf) + 1]['title'];
+                image = sd[sd.indexOf(pf) + 1]['url'];
+                own = sd[sd.indexOf(pf) + 1]['copyright'];
+                date = sd[sd.indexOf(pf) + 1]['date'];
+                detail = sd[sd.indexOf(pf) + 1]['explanation'];
+                pf = sd[sd.indexOf(pf) + 1];
+              });
+            } else if (dis.delta.dx > 0) {
+              print("left");
+              setState(() {
+                title = sd[sd.indexOf(pf) - 1]['title'];
+                image = sd[sd.indexOf(pf) - 1]['url'];
+                own = sd[sd.indexOf(pf) - 1]['copyright'];
+                date = sd[sd.indexOf(pf) - 1]['date'];
+                detail = sd[sd.indexOf(pf) - 1]['explanation'];
+                pf = sd[sd.indexOf(pf) - 1];
+              });
+            }
+          },
           child: Column(
             children: [
               ClipRRect(

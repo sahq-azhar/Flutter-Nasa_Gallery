@@ -55,7 +55,7 @@ class Test extends StatelessWidget {
                       crossAxisCount: 4, //  two card horizontally
                       padding: const EdgeInsets.all(2.0),
                       children: snapshot.data.map<Widget>((item) {
-                        return new MyHomePage(item);
+                        return new MyHomePage(item, snapshot.data);
                       }).toList(),
 
                       //Here is the place that we are getting flexible/ dynamic card for various images
@@ -94,14 +94,16 @@ class Test extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage(this.pf);
+  MyHomePage(this.pf, this.sd);
   final pf;
+  final sd;
   _MyHomePageState createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
   //to keep things readable
   var pf;
+  var sd;
   String image;
   String title;
   String own;
@@ -110,6 +112,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     setState(() {
       pf = widget.pf;
+      sd = widget.sd;
       //if values are not null only we need to show them
       image = (pf['url'] != '') ? pf['url'] : '';
       title = (pf['title'] != '') ? pf['title'] : '';
@@ -131,7 +134,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: InkWell(
           onTap: () => Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => Detailpage(pf)),
+            MaterialPageRoute(builder: (context) => Detailpage(pf, sd)),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
